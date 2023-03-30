@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h3>Products</h3>
+    <div>
+        @foreach (var item in Model.Products)
+        {
+            <p>@item.Maker</p>
+        }
+    </div>
+
+    <h3>Users</h3>
+    <div>
+        @foreach(var item in Model.Users)
+            {
+                <p>@item.Address.City  -  @item.Address.Geo.Lat</p>
+            }
+    </div>
+    
+
+
+</div>
